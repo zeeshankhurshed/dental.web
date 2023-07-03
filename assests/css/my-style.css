@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* outline: 1px solid red; */
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.sec-space{
+    padding: 40px 0;
+}
+.d-flex{
+    display: flex;
+}
+.l-none{
+    list-style-type: none;
+}
+.td-none{
+    text-decoration: none;
+}
+.custom-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-custom{
+    display: inline-block;
+    text-decoration: none;
+    padding: .3rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 3px;
+}
+.btn-green{
+    color:white;
+    background-color: var(--darkgreen);
+}
+.btn-trans{
+    background-color: transparent;
+    border-color: black;
+}
+.btn-trans:hover{
+    color: black;
+    background-color: green;
+}
+.b-none {
+    border: none;
+}
+:root{
+    --white:#fefefe;
+    --black:#0000;
+    --green:#75a23d;
+    --blue:#37c5a6;
+    --dardblue:#163f7a;
+    --lightblue:#a9e6d9;
+    --lighterblue:#43b2d2;
+    --navyblue:#daeff6;
+    --darkgreen:#81b441;
+    --darkblack:#262626;
+    --gray:#808080;
+   
+}
+/* ------------------------------------------------------------------ */
+                            /* top-navbar */
+/* ------------------------------------------------------------------ */
+.header .top-navbar {
+ background-color: var(--darkblack);
+}
+.header .top-navbar .top-navbar-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0;
+   
+}
+.header .top-navbar .top-navbar-inner .envato{
+color: var(--darkgreen);
+font-size: calc(1rem + 1vw);
+}
+.header .top-navbar .top-navbar-inner .envato i{
+    font-size: calc(.6rem + .5vw);
+}
+.header .top-navbar .top-navbar-inner .buy{
+    font-size:calc(.5rem + .4vw) ;
+}
+/* ------------------------------------------------------------------ */
+                            /* social-nav */
+/* ------------------------------------------------------------------ */
+.social-navbar .social-inner .adress a i{
+  color: var(--blue);
+}
+.social-navbar .social-inner .adress span{
+    font-size: calc(.4rem + .4vw);
+    padding-left: 4px;
+}
+.social-navbar .social-inner li {
+padding: .5rem;
+}
+.social-navbar .social-inner li a {
+    color: var(--gray);
+}
+/* ------------------------------------------------------------------ */
+                            /* navbar-wrapper */
+/* ------------------------------------------------------------------ */
+.navbar-wrapper .navbar-inner .navbar .navbar-brand  {
+ color: var(--blue);
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: calc(1rem + 1vw);
+    }
+.navbar-wrapper .navbar-inner .navbar .navbar-brand span {
+border: 1px solid transparent;
+border-radius: 50%;
+padding: .5rem;
+color: var(--white);
+background-color: var(--blue);
+font-size: calc(1rem + 1vw);
+
+}
+.navbar-wrapper .navbar-inner .navbar .navbar-brand strong {
+    color: var(--dardblue);
+     }
+.navbar-wrapper .navbar-inner .navbar .navbar-nav .nav-link:hover {
+    color: var(--blue);
+
+}
+.navbar-wrapper .navbar-inner .navbar .navbar-nav .nav-item .triangle-up{
+    width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 16px solid var(--blue);
+    position: absolute;
+    top: -16px;
+    right: 0;
+    left: 0;
+    transform: translateX(5rem); 
+}
+.navbar-expand-lg .navbar-nav .home {
+    left: -4rem;
+    top: 3rem;
+    background-color: var(--blue);
+    color: var(--white);
+}
+.navbar-expand-lg .navbar-nav .home .dropdown-item{
+    color: var(--white);
+}
+.dropdown-toggle::after {
+display: none;
+}
+.navbar-expand-lg .navbar-nav .feature {
+    left: 40rem;
+    top: 4rem;
+    background-color: var(--blue);
+    color: var(--white);
+}
+.navbar-expand-lg .navbar-nav .feature .dropdown-item{
+    color: var(--white);
+}
+#hamburgerModal .modal-content{
+    top: 1.5rem;
+    width: 239vh;
+    right: 12rem;
+    background-color: var(--darkblack);
+}
+#hamburgerModal .modal-body .btn:hover {
+    border: none;
+}
+#hamburgerModal .modal-body .btn span {
+    padding-left: 20rem;
+}
+#hamburgerModal .modal-body .card-body {
+    text-align: start;
+    margin-left: 14rem;
+    background-color: var(--darkblack);
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:992px){
+    .navbar-wrapper .navbar-inner .navbar .toggle {
+       position: absolute;
+       top: 0;
+       right: 8rem;
+       
+  }
+}
+@media(max-width:768px){
+    .navbar-wrapper .navbar-inner .navbar .toggle {
+        right: 4rem;
+    }
+   
+    
+}
+@media(max-width:576px){
+    .social-navbar .social-inner{
+        flex-direction: column-reverse;
+    }
+    #hamburgerModal .modal-body .btn span {
+        padding-left: 10rem;
+    }
+    #hamburgerModal .modal-content{
+        top: 2.5rem;
+    }
+    #hamburgerModal .modal-content{
+        top: 2.3rem;
+        width: 56vh;
+        right: 8px;
+       
+    }
+
+#hamburgerModal .modal-body .card-body {
+
+    margin-left: 3rem;
+
+}
+}
