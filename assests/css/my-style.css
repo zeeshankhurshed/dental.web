@@ -1611,7 +1611,16 @@ display: none;
     .welcome-wrapper .card p {
         font-size: calc(.4rem + .4vw);
     }
-
+    .routine-wrapper .routine-wrapper-inner .row .we-do .chain {
+        display: none;
+    }
+    .staff-wrapper .row .dir .tru{
+        display: none;
+    }
+    .blog-wrapper .feb .mul {
+        display: none;
+    }
+    
     .section_success .success .deep {
         width: 15rem;
     }
