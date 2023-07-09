@@ -110,7 +110,7 @@
     color: var(--blue);
 }
 
-.social-navbar .social-inner .adress span {
+.social-navbar .social-inner .adres span {
     font-size: calc(.4rem + .4vw);
     padding-left: 4px;
 }
@@ -219,7 +219,13 @@
     background-color: var(--darkblack);
 }
 
+
 #hamburgerModal .modal-header .btn-close {
+    background-color: var(--white);
+}
+
+
+#hamburgerModal .modal-header .btn-close  {
     background-color: var(--white);
 }
 
@@ -237,6 +243,7 @@
     background-color: var(--darkblack);
 }
 
+
 #hamburgerModal .modal-body .card-body ul li {
     padding: .5rem 0;
 }
@@ -253,7 +260,7 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     text-align: center;
 }
 
@@ -487,16 +494,14 @@
 
 .welcome-wrapper .blog .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Adjust the opacity and color as desired */
-    opacity: 0;
-    /* Initial opacity set to 0 to hide the overlay */
-    transition: opacity 0.3s ease;
 }
+#hamburgerModal .modal-body .card-body ul li {
+    padding: .5rem 0;
+}
+/* ------------------------------------------------------------------ */
+                            /* carosuel-wrapper */
+/* ------------------------------------------------------------------ */
+
 
 .welcome-wrapper .blog:hover .overlay {
     opacity: .5;
@@ -1206,20 +1211,160 @@
     right: 3.7rem;
     font-size: calc(.4rem + .4vw);
     width: max-content;
+
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+ } 
+ .carosuel-wrapper .carousel-inner .carousel-item {
+    background-color: var(--darkblack);
+
 }
 
+.carosuel-wrapper .carousel-inner .carousel-item .image {
+    opacity: 0.5;
+}
 
+.carosuel-wrapper .carousel-inner .carousel-caption {
+    text-align: justify;
+    top: 40%;
+}
+.carosuel-wrapper .carousel-inner .carousel-caption .text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* .carosuel-wrapper .carousel-inner .carousel-caption h2 {
+    color: var(--dardblue);
+    opacity: 0;
+    font-size: calc(2rem + 1vw);
+}
+.carosuel-wrapper .carousel-inner .carousel-caption p {
+    color: var(--gray);
+    opacity: 0;
+    
+}
+.carosuel-wrapper .carousel-inner .carousel-caption.active h2 {
+ animation: fadeInLeft .5s ease forwards;
+}
+.carosuel-wrapper .carousel-inner .carousel-caption.active p {
+ animation: fadeInRight .5s ease forwards;
+}
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;  
+  } */
+  
+  .carosuel-wrapper .carousel-inner .carousel-caption  .heading-primary {
+      color:#333;
+      /* text-transform: uppercase; */
+  }
+  
+  .carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-main {
+      display: block;
+      font-size: calc(1rem + 1rem);
+      /* font-weight: 400; */
+      /* letter-spacing: 35px; */
+     /*  Animation decalaration   */
+      animation-name: moveInleft;
+      animation-duration: 3s;
+      color: var(--dardblue);
+  }
+  
+  .carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-sub {
+      display: block;
+      font-size: 50%;
+      /* font-weight: 700; */
+      /* letter-spacing: 15.9px; */
+    
+      animation-name: moveInRight;
+      animation-duration: 3s;
+  }
+  
+  @keyframes moveInleft {
+      0% {
+          opacity: 0;
+          transform: translateX(-100px);
+      }
+  
+      80% {
+          transform: translateX(10px);
+      }
+      100% {
+          opacity: 1;
+          transform: translate(0);
+      }
+  }
+  
+  @keyframes moveInRight {
+      0% {
+          opacity: 0;
+          transform: translateX(100px);
+      }
+  
+      80% {
+          transform: translateX(-10px);
+      }
+      
+      100% {
+          opacity: 1;
+          transform: translate(0);
+      }
+  
+  }
+  .carosuel-wrapper .carousel-inner .carousel-caption .text-box #appoint {
+      /* border: 3px solid black;
+    border-radius: 5px; */
+    height: 100px;
+    overflow: hidden;
+}
+.carosuel-wrapper .carousel-inner .carousel-caption .text-box #appoint-text {
+    height: 100%;
+    text-align: center;
+    transform: translateY(0);
+    animation: my-animation 5s;
+}
 
+@keyframes my-animation {
+    from {
 
+      transform: translateY(100%);
+    }
+    to {
+  
+      transform: translateY(0);
+    }
+  }
+.carosuel-wrapper .carousel-inner .carousel-caption .text-box .appoint {
+    margin-top: 1rem;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+}
+.carosuel-wrapper .carousel-inner .carousel-caption .text-box .appoint:hover {
+  background-color: var(--dardblue);
+}
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+     display: contents;
+}
 
+.carousel-dark .carousel-indicators [data-bs-target] {
+    border: 1px solid transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 
-
+}
 
 
 
 
 @media(max-width:992px) {
     .navbar-wrapper .navbar-inner .navbar .toggle {
+
         position: absolute;
         top: 0;
         right: 8rem;
@@ -1279,12 +1424,26 @@
     .products-wrapper .products-wrapper-inner .chart {
         border: none;
     }
+
+       /* position: absolute;
+       top: 0;
+       right: 8rem; */
+  }
+  .social-navbar .social-inner .adress span {
+    font-size: calc(.8rem + .5vw);
+  }
+  .carosuel-wrapper .carousel-inner .carousel-caption .text-box .appoint {
+    margin-top: 0;
+ 
 }
+
+
 
 @media(max-width:768px) {
     .navbar-wrapper .navbar-inner .navbar .toggle {
         right: 4rem;
     }
+
 
     .carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-main {
         font-size: calc(.8rem + .5rem);
@@ -1342,6 +1501,19 @@
         justify-content: center !important;
 
     }
+
+    .carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-main {
+        font-size: calc(.8rem + .5rem);
+    }
+   .carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-sub {
+         font-size: 30%;
+   } 
+   .carosuel-wrapper .carousel-inner .carousel-caption .text-box .appoint {
+   font-size: calc(.5rem + .5vw);
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+} 
+
 }
 
 @media(max-width:576px) {
@@ -1349,9 +1521,15 @@
         flex-direction: column-reverse;
     }
 
+
     .social-navbar .social-inner .adress span {
         font-size: calc(.4rem + .5vw);
     }
+
+
+    .social-navbar .social-inner .adress span {
+        font-size: calc(.4rem + .5vw);
+      }
 
     #hamburgerModal .modal-body .btn span {
         padding-left: 10rem;
@@ -1364,6 +1542,7 @@
     #hamburgerModal .modal-content {
         top: 2.3rem;
         width: 56vh;
+
         right: 8px;
     }
 
@@ -1415,4 +1594,25 @@
 
     }
 
+
+        /* right: 8px;     */
+    }
+#hamburgerModal .modal-body .card-body {
+
+    margin-left: 4rem;
+
+}
+.carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-main {
+    font-size: calc(.3rem + .3rem);
+}
+.carosuel-wrapper .carousel-inner .carousel-caption .heading-primary-sub {
+     font-size: 20%;
+} 
+.carosuel-wrapper .carousel-inner .carousel-caption .text-box {
+    top: 80%;
+}
+.carosuel-wrapper .carousel-inner .carousel-caption .text-box .appoint {
+font-size: calc(.4rem + .4vw);
+border-radius: 2rem;
+padding: .5rem .5rem;
 }
